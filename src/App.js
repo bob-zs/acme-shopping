@@ -4,6 +4,7 @@ import { fetchCart, exchangeToken, logout } from './store';
 import { Link, Route } from 'react-router-dom';
 import SignIn from './SignIn';
 import Cart from './Cart';
+import Info from './Info';
 
 class App extends React.Component{
   componentDidMount(){
@@ -26,9 +27,13 @@ class App extends React.Component{
           auth.id ? <Link to='/cart'>Cart ({cart.lineItems.length})</Link>: null
         }
         {
+          auth.id? <Link to='/info'>User Info</Link>:null
+        }
+        {
           auth.id ? (
             <Fragment>
               <Route path='/cart' component={ Cart } />
+              <Route path='/info' component={ Info } />
             </Fragment>
           ): null 
         }
