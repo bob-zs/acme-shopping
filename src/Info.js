@@ -33,3 +33,5 @@ const Info = ({ auth })=> {
 };
 
 export default connect(state => state)(Info);
+
+//Ignore this comment
