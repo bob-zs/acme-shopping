@@ -8,7 +8,10 @@
     "build:dev": "npm run build -- --watch --mode=development",
     "test": "mocha spec.js",
     "test:dev": "QUIET=true JWT=shh DATABASE_URL=postgres://localhost/acme_db_test npm test -- --watch",
-    "start:dev": "JWT=shhh nodemon server --ignore src/ --ignore dist/ & npm run build:dev"
+    "start:dev": "JWT=shhh nodemon server --ignore src/ --ignore dist/ & npm run build:dev",
+    "prepare": "husky install",
+    "prettify": "prettier --ignore-unknown --stdin --stdin-filepath \"{}\"",
+    "tests": "git-format-staged -f 'prettier --ignore-unknown --stdin --stdin-filepath \"{}\"' ."
   },
   "keywords": [],
   "author": "",
@@ -28,8 +31,11 @@
     "axios": "^0.27.2",
     "babel-loader": "^8.2.5",
     "chai": "^4.3.6",
+    "git-format-staged": "^3.0.0",
+    "husky": "^8.0.0",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.19",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",

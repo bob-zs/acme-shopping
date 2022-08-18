@@ -13,8 +13,8 @@ app.use('/api/sessions', require('./routes/sessions'));
 app.use('/api/products', require('./routes/products'));
 
 app.use((err, req, res, next)=> {
-  console.log(err);
-  res.status(err.status || 500).send({ error: err });
+console.log(err);
+res.status(err.status || 500).send({ error: err });
 });
 
 module.exports = app;

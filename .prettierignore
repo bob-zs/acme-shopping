@@ -1,0 +1,10 @@
+# Ignore all node_modules
+node_modules/
+dist/
+webpack.config.js
+
+package.json
+package-lock.json
+
+README.md
+RUBRIC.md
