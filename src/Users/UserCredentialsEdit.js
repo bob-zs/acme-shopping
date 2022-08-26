@@ -36,9 +36,6 @@ class UserCredentialsEdit extends Component {
     }
   }
 
-  //   componentDidMount(){
-  // this.setState({ username:this.props.auth.username, password:this.props.auth.password, passwordConfirm:this.props.auth.password  });
-  //   }
   validatePassword() {
     return (
       this.state.password.length > 0 &&
