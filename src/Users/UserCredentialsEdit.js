@@ -30,7 +30,7 @@ class UserCredentialsEdit extends Component {
       alert('Your Username / Password has been updated!');
 
     } catch (ex) {
-      console.log(ex);
+      console.error(ex);
     }
   }
   validatePassword() {

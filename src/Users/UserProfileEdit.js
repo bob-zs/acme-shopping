@@ -25,7 +25,7 @@ class UserProfileEdit extends Component {
             await this.props.update(information);
         }
         catch(ex){
-        console.log(ex);
+        console.error(ex);
         }
     }
     componentDidMount(){

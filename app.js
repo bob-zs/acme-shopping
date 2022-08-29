@@ -20,7 +20,7 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/stripe', require('./routes/stripe'));
 
 app.use((err, _req, res, _next) => {
-  console.log(err);
+  console.error(err);
   res.status(err.status || 500).send({ error: err });
 });
 

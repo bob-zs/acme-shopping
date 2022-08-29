@@ -31,9 +31,6 @@ class App extends React.Component {
   }
   render() {
     const { auth } = this.props;
-    console.log('Chloe this is the store');
-    console.log(this.props);
-   
     return (
       <main>
         {auth.id ? (
